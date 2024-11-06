@@ -1,4 +1,5 @@
 # Copa Raízes - Site Oficial
+[coparaizes.com.br](https://coparaizes.com.br)
 
 ## 📋 Sobre o Projeto
 
@@ -35,7 +36,8 @@ Contribuições são sempre bem-vindas! Para contribuir:
 
 ## 👤 Autor
 
-Fernando Gatti
+
+[Fernando Gatti](https://github.com/gattifernando)
 
 ---
 
