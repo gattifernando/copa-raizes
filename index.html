@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copa Raízes - Campeonato de Futebol</title>
+
+    <!-- Meta Tags para SEO -->
+    <meta
+      name="description"
+      content="Copa Raízes - Campeonato de futebol que une famílias e celebra a paixão pelo esporte, promovendo integração e cultura."
+    />
+    <meta
+      name="keywords"
+      content="Copa Raízes, futebol, evento esportivo, campeonato regional, cultura, famílias, esporte, amigos"
+    />
+    <meta name="author" content="Fernando Gatti" />
+
+    <!-- Meta Tags para Redes Sociais (Open Graph / Twitter) -->
+    <meta property="og:title" content="Copa Raízes - Campeonato de Futebol " />
+    <meta
+      property="og:description"
+      content="Copa Raízes - O campeonato de futebol que une famílias e celebra a paixão pelo esporte."
+    />
+    <meta property="og:image" content="padrao.jpg" />
+    <meta property="og:url" content="https://coparaizes.com.br" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Copa Raízes - Campeonato de Futebol" />
+    <meta
+      name="twitter:description"
+      content="Copa Raízes - O campeonato de futebol que une famílias e celebra a paixão pelo esporte."
+    />
+    <meta name="twitter:image" content="padrao.jpg" />
+
+    <!-- Link do Favicon -->
+    <link rel="icon" href="favicon.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rammetto+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --principal: #eeb701;
+        --secundaria: #512b13;
+        --escura: #000;
+        --clara: #fff;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        overflow-y: scroll;
+        background: var(--escura);
+        font-family: "Raleway", serif;
+      }
+
+      footer {
+        width: 100vw;
+        min-height: 130px;
+        color: var(--clara);
+        background: url(bg.webp) no-repeat center center fixed;
+        background-position: bottom;
+      }
+
+      /* banner principal */
+      .banner {
+        position: relative;
+        width: 100vw;
+        height: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--clara);
+        background: url(bg.webp) no-repeat center center fixed;
+        background-size: cover;
+        animation: backgroundFade 2.5s ease-out forwards;
+      }
+
+      h1 {
+        font-family: "Rammetto One", sans-serif;
+        font-size: 3rem;
+        line-height: 4rem;
+        margin-bottom: 20px;
+      }
+
+      .animated-img {
+        max-width: 40%;
+        position: relative;
+        transform: scale(1.2);
+        opacity: 0;
+        animation: imgFade 1.5s ease-out forwards;
+        animation-delay: 0.5s;
+        will-change: transform;
+      }
+
+      @keyframes scrollBanner {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .animated-img {
+          max-width: 80%;
+          position: relative;
+          transform: scale(1.2);
+          opacity: 0;
+          animation: imgFade 1.5s ease-out forwards;
+          animation-delay: 0.5s;
+          will-change: transform;
+        }
+      }
+
+      /* Animação de entrada para o background */
+      @keyframes backgroundFade {
+        0% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      /* Animação de entrada para a imagem */
+      @keyframes imgFade {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .indicador-leitura {
+        background: var(--principal);
+        position: fixed;
+        height: 1%;
+        inset: 99% 0 0% 0;
+        transform-origin: left;
+        animation: scroll 1ms ease-in-out;
+        animation-timeline: scroll();
+      }
+
+      h1,
+      p {
+        animation: aparecer 1ms ease-in-out;
+        animation-timeline: view();
+        animation-range: cover 0% cover 40%;
+      }
+      @keyframes aparecer {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes scroll {
+        from {
+          scale: 0 1;
+        }
+        to {
+          scale: 1 1;
+        }
+      }
+
+      /* estilos gerais */
+      header,
+      section {
+        padding: 60px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        margin-inline: auto;
+        width: min(70ch, 100%);
+      }
+
+      .sobre {
+        color: var(--clara);
+      }
+
+      .anteriores {
+        background: var(--principal);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="indicador-leitura"></div>
+    <header class="banner">
+      <img
+        src="copa.webp"
+        alt="Logo da Copa Raízes, um campeonato de futebol que promove união familiar e celebra o esporte "
+        class="animated-img"
+      />
+    </header>
+    <section class="sobre">
+      <div class="container">
+        <h1>O que é a Copa Raízes?</h1>
+        <p>
+          A Copa Raízes é um campeonato de futebol que promove união familiar e
+          celebra o esporte. É um evento que reúne famílias e amigos promovendo
+          a união e a amizade.
+        </p>
+        <p>
+          O evento é realizado de forma esporádica e sem data definida, mas
+          sempre no distrito de Vinhático (cidade de Montanha), no extremo norte
+          do Espírito Santo.
+        </p>
+      </div>
+    </section>
+    <section class="anteriores">
+      <div class="container">
+        <h1>Campeonatos anteriores</h1>
+        <p>
+          A Copa Raízes foi um dos principais eventos de esportes da cidade de
+          São Paulo. É uma oportunidade para os participantes de se conectarem,
+          compartilhar experiências e celebrar a paixão pelo esporte.
+        </p>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <span>Feito por Fernando Gatti</span>
+      </div>
+    </footer>
+  </body>
+</html>
