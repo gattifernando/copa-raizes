@@ -10,7 +10,7 @@ A Copa Raízes é um campeonato de futebol que promove união familiar e celebra
 - HTML5
 - CSS3
 - Google Fonts (Raleway e Rammetto One)
-- NADA DE JAVASCRIPT (ufaaaa! kkkk)
+- QUASE NADA DE JAVASCRIPT (tive que me render e usar kkk)
 
 ## 🎨 Features
 
