@@ -84,10 +84,11 @@ section {
 }
 
 .jogo {
-    /* background-size: cover; */
-    height: 10vh;
-    /* width: 100vw; */
+    height: auto;
+    width: 100vw;
+    padding: 0;
 }
+
 
 h1 {
     font-family: "Rammetto One", sans-serif;
