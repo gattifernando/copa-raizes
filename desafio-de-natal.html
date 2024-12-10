@@ -50,6 +50,17 @@
   </head>
   <body>
     <div class="indicador-leitura"></div>
+    <!-- menu -->
+    <div id="menu"></div>
+    <script>
+      async function carregarAnteriores() {
+        const response = await fetch("menu.html");
+        const menu = await response.text();
+        document.getElementById("menu").innerHTML = menu;
+      }
+      document.addEventListener("DOMContentLoaded", carregarAnteriores);
+    </script>
+    <!-- fim menu -->
     <header class="jogo">
       <img src="img/2008/topo.jpg" alt="Abertura" />
     </header>
@@ -146,12 +157,12 @@
     </section>
 
     <!-- ANTERIORES -->
-    <div id="anteriores"></div>
+    <div id="timeline"></div>
     <script>
       async function carregarAnteriores() {
-        const response = await fetch("anteriores.html");
-        const conteudoAnteriores = await response.text();
-        document.getElementById("anteriores").innerHTML = conteudoAnteriores;
+        const response = await fetch("timeline.html");
+        const timeline = await response.text();
+        document.getElementById("timeline").innerHTML = timeline;
       }
       document.addEventListener("DOMContentLoaded", carregarAnteriores);
     </script>
