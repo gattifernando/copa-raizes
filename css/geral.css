@@ -456,10 +456,13 @@ img {
     border-radius: 8px;
     max-width: 90%;
     max-height: 80%;
+    display: block;
+    position: relative;
+    /* Adicionando relative para controle de botões */
 }
 
 /* Botão de fechar */
-.lightbox a {
+.lightbox .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -468,6 +471,38 @@ img {
     text-decoration: none;
     font-weight: bold;
 }
+
+
+/* Navegação */
+.next,
+.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+/* Botão para ir à próxima imagem */
+.next {
+    right: 10px;
+}
+
+/* Botão para ir à imagem anterior */
+.prev {
+    left: 10px;
+}
+
+.next:hover,
+.prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 
 @media screen and (max-width: 768px) {
 
