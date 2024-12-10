@@ -35,7 +35,7 @@
     <meta name="twitter:image" content="./img/padrao.jpg" />
 
     <!-- Link do Favicon -->
-    <link rel="icon" href="./img/favicon.png" type="image/png" />
+    <link rel="icon" href="./favicon.png" type="image/png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,6 +50,17 @@
   </head>
   <body>
     <div class="indicador-leitura"></div>
+    <!-- menu -->
+    <div id="menu"></div>
+    <script>
+      async function carregarAnteriores() {
+        const response = await fetch("menu.html");
+        const menu = await response.text();
+        document.getElementById("menu").innerHTML = menu;
+      }
+      document.addEventListener("DOMContentLoaded", carregarAnteriores);
+    </script>
+    <!-- fim menu -->
     <header class="jogo">
       <img src="img/2008/topo.jpg" alt="Abertura" />
     </header>
@@ -84,12 +95,24 @@
         <h1 class="">Os jogos</h1>
 
         <div class="galeria">
-          <a href="#img1"><img src="img/2008/01.jpg" alt="Imagem 1" /></a>
-          <a href="#img2"><img src="img/2008/02.jpg" alt="Imagem 2" /></a>
-          <a href="#img3"><img src="img/2008/03.jpg" alt="Imagem 3" /></a>
-          <a href="#img4"><img src="img/2008/04.jpg" alt="Imagem 4" /></a>
-          <a href="#img5"><img src="img/2008/05.jpg" alt="Imagem 5" /></a>
-          <a href="#img6"><img src="img/2008/06.jpg" alt="Imagem 6" /></a>
+          <a href="#img1"
+            ><img src="img/2008/01.jpg" loading="lazy" alt="Imagem 1"
+          /></a>
+          <a href="#img2"
+            ><img src="img/2008/02.jpg" loading="lazy" alt="Imagem 2"
+          /></a>
+          <a href="#img3"
+            ><img src="img/2008/03.jpg" loading="lazy" alt="Imagem 3"
+          /></a>
+          <a href="#img4"
+            ><img src="img/2008/04.jpg" loading="lazy" alt="Imagem 4"
+          /></a>
+          <a href="#img5"
+            ><img src="img/2008/05.jpg" loading="lazy" alt="Imagem 5"
+          /></a>
+          <a href="#img6"
+            ><img src="img/2008/06.jpg" loading="lazy" alt="Imagem 6"
+          /></a>
         </div>
 
         <!-- Lightboxes -->
@@ -146,12 +169,12 @@
     </section>
 
     <!-- ANTERIORES -->
-    <div id="anteriores"></div>
+    <div id="timeline"></div>
     <script>
       async function carregarAnteriores() {
-        const response = await fetch("anteriores.html");
-        const conteudoAnteriores = await response.text();
-        document.getElementById("anteriores").innerHTML = conteudoAnteriores;
+        const response = await fetch("timeline.html");
+        const timeline = await response.text();
+        document.getElementById("timeline").innerHTML = timeline;
       }
       document.addEventListener("DOMContentLoaded", carregarAnteriores);
     </script>

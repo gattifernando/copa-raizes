@@ -18,7 +18,7 @@
     <meta name="author" content="Fernando Gatti" />
 
     <!-- Meta Tags para Redes Sociais (Open Graph / Twitter) -->
-    <meta property="og:title" content="Copa Raízes - Campeonato de Futebol " />
+    <meta property="og:title" content="Copa Raízes - Campeonato de Futebol" />
     <meta
       property="og:description"
       content="Copa Raízes - O campeonato de futebol que une famílias e celebra a paixão pelo esporte."
@@ -35,7 +35,7 @@
     <meta name="twitter:image" content="./img/padrao.jpg" />
 
     <!-- Link do Favicon -->
-    <link rel="icon" href="./img/favicon.png" type="image/png" />
+    <link rel="icon" href="./favicon.png" type="image/png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,6 +50,17 @@
   </head>
   <body>
     <div class="indicador-leitura"></div>
+    <!-- menu -->
+    <div id="menu"></div>
+    <script>
+      async function carregarAnteriores() {
+        const response = await fetch("menu.html");
+        const menu = await response.text();
+        document.getElementById("menu").innerHTML = menu;
+      }
+      document.addEventListener("DOMContentLoaded", carregarAnteriores);
+    </script>
+    <!-- fim menu -->
     <header class="banner">
       <img
         src="./img/copa.webp"
@@ -84,17 +95,17 @@
         </p>
       </div>
     </section>
-    <!-- ANTERIORES -->
-    <div id="anteriores"></div>
+    <!-- timeline -->
+    <div id="timeline"></div>
     <script>
       async function carregarAnteriores() {
-        const response = await fetch("anteriores.html");
+        const response = await fetch("timeline.html");
         const conteudoAnteriores = await response.text();
-        document.getElementById("anteriores").innerHTML = conteudoAnteriores;
+        document.getElementById("timeline").innerHTML = conteudoAnteriores;
       }
       document.addEventListener("DOMContentLoaded", carregarAnteriores);
     </script>
-    <!-- FIM ANTERIORES -->
+    <!-- fim timeline -->
 
     <footer class="footer">
       <div class="footer-content">
