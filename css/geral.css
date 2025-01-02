@@ -581,3 +581,14 @@ img {
 .button:hover {
     background-color: var(--principal);
 }
+
+.instagram {
+    width: 20px;
+    height: 20px;
+    background-image: url('/img/instagram.jpg');
+    background-size: cover;
+    display: inline-block;
+    border-radius: 100px;
+    margin-bottom: -5px;
+    margin-left: 10px;
+}
